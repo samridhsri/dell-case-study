@@ -1,4 +1,4 @@
-# Dell Technologies — Data Scientist Case Study
+# Dell Technologies - Data Scientist Case Study
 **Samridh Srivastava | March 2026**
 
 ---
