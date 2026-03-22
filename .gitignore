@@ -1,0 +1,71 @@
+# ------------------------------
+# Jupyter Notebook
+# ------------------------------
+.ipynb_checkpoints/
+
+# ------------------------------
+# Python
+# ------------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+
+# ------------------------------
+# Virtual Environments
+# ------------------------------
+venv/
+env/
+ENV/
+.venv/
+
+# ------------------------------
+# IDE / Editor
+# ------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ------------------------------
+# OS Files
+# ------------------------------
+.DS_Store
+Thumbs.db
+
+# ------------------------------
+# Data Files (IMPORTANT)
+# ------------------------------
+data/
+*.csv
+*.parquet
+*.h5
+*.feather
+*.pkl
+
+# If you want to keep sample data:
+!data/sample/
+
+# ------------------------------
+# Model Artifacts
+# ------------------------------
+models/
+*.h5
+*.pt
+*.pth
+*.ckpt
+*.joblib
+
+# ------------------------------
+# Environment / Secrets
+# ------------------------------
+.env
+*.env
+.env.*
+
