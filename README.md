@@ -27,10 +27,10 @@ The work is structured as a four-iteration, cumulative Jupyter notebook that pro
 
 | Iteration | Focus | Key Output |
 |-----------|-------|------------|
-| **1 — Data Cleaning & Baseline** | Negative durations, sentinel dates, outlier removal, Linear Regression baseline | Clean dataset, baseline MAE |
-| **2 — Calendar Feature Engineering** | Fiscal week, EOQ flag, weekend indicator, day-of-week | Best holdout MAE (~0.88 days); LR + Calendar outperforms tree models on holiday-dense test window |
-| **3 — Capacity Feature Engineering** | OT utilisation, site congestion (weighted by remaining `expected_kit_minutes`), lag/rolling features | Time-series CV with reduced variance vs. Iteration 2 |
-| **4 — Insights & Classification** | SHAP attribution, OT/congestion what-if simulations, on-time classification (Logistic Regression + Random Forest), operational recommendations | ROC/PR curves, 5 strategic recommendations |
+| **1. Data Cleaning & Baseline** | Negative durations, sentinel dates, outlier removal, Linear Regression baseline | Clean dataset, baseline MAE |
+| **2. Calendar Feature Engineering** | Fiscal week, EOQ flag, weekend indicator, day-of-week | Best holdout MAE (~0.88 days); LR + Calendar outperforms tree models on holiday-dense test window |
+| **3. Capacity Feature Engineering** | OT utilisation, site congestion (weighted by remaining `expected_kit_minutes`), lag/rolling features | Time-series CV with reduced variance vs. Iteration 2 |
+| **4. Insights & Classification** | SHAP attribution, OT/congestion what-if simulations, on-time classification (Logistic Regression + Random Forest), operational recommendations | ROC/PR curves, 5 strategic recommendations |
 
 ---
 
