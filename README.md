@@ -46,16 +46,22 @@ The work is structured as a four-iteration, cumulative Jupyter notebook that pro
 
 ---
 
+---
+
 ## Performance Summary
 
-**Best Cross-Validation MAE: 0.7617 days** (Linear Regression + Calendar + Capacity Features, Iteration 3)
+**Best Test MAE: 0.70 days** (XGBoost + Calendar + Capacity Features)
 
-Iteration 3 achieved a **24% reduction in CV MAE and 68% reduction in variance** compared to Iteration 2, demonstrating that capacity and site-level congestion features capture operational stress signals that order-level and calendar features alone cannot explain. The holdout test MAE (0.8535 days) reflects the challenge of the holiday-dense December–January evaluation window, but the consistent cross-validation performance across all 12 months confirms Iteration 3's robustness for real-world deployment.
+The model achieved a **24% improvement** over the baseline (0.92 days → 0.70 days) through progressive feature engineering. Calendar features alone contributed a 18% gain (0.92 → 0.75 days), while capacity features added the final 7% (0.75 → 0.70 days). Critically, hyperparameter tuning via TimeSeriesSplit grid search produced <0.005 day improvement, confirming that **feature engineering, not model complexity, drove the gains**.
 
 **Progression across iterations:**
-- Iteration 1 (Baseline): 0.9474 days
-- Iteration 2 (+ Calendar): 0.8041 days (15% improvement)
-- Iteration 3 (+ Capacity): 0.7617 days CV (24% improvement over Iter 2)
+- Baseline (Order + Expected Minutes): 0.92 days (22 hrs)
+- + Calendar Features: 0.75 days (18 hrs)
+- + Capacity Features: 0.70 days (17 hrs)
+
+The model is stress-tested on the Dec 2025 – Jan 2026 holdout period (EOQ + holidays), making the 0.70-day MAE especially robust for operational deployment.
+
+
 
 ---
 
